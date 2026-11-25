@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "task_id": "dev_08_bounce_near_marker",
+  "prompt": "A ball makes two smooth diminishing bounces on a flat floor beside a stationary cube. Contact with the floor should be visually clear; the ball must never enter the cube. Keep the entire bounce and both subjects in a fixed frame.",
+  "split": "dev",
+  "seed": 2108,
+  "duration_s": 3,
+  "fps": 12,
+  "width": 640,
+  "height": 360,
+  "sample_times": [
+    0,
+    0.5,
+    1,
+    1.5,
+    2,
+    2.5,
+    2.916667
+  ],
+  "subjects": [
+    {
+      "id": "ball",
+      "role": "primary",
+      "required": true,
+      "fully_in_frame": true,
+      "min_area_ratio": 0.005,
+      "max_area_ratio": 0.7
+    },
+    {
+      "id": "cube",
+      "role": "primary",
+      "required": true,
+      "fully_in_frame": true,
+      "min_area_ratio": 0.005,
+      "max_area_ratio": 0.7
+    }
+  ],
+  "camera": {
+    "pitch_deg_range": [
+      -70,
+      15
+    ],
+    "height_range": [
+      0.5,
+      12
+    ]
+  },
+  "collision": {
+    "forbidden_pairs": [
+      [
+        "ball",
+        "cube"
+      ]
+    ],
+    "allowed_pairs": [],
+    "tolerance": 0.001
+  },
+  "evaluation": {
+    "pass_score": 75,
+    "hard_fail_score_cap": 40
+  }
+}

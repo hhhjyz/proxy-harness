@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "task_id": "dev_23_scheduled_entry",
+  "prompt": "A stationary cube is visible for the entire clip. A sphere enters smoothly from above around 1 second and then moves beside it without contact. Before 1 second the sphere may be outside the frame; from 1 second onward both complete objects must be visible.",
+  "split": "dev",
+  "seed": 2123,
+  "duration_s": 3,
+  "fps": 12,
+  "width": 640,
+  "height": 360,
+  "sample_times": [
+    0,
+    0.5,
+    1,
+    1.5,
+    2,
+    2.5,
+    2.916667
+  ],
+  "subjects": [
+    {
+      "id": "cube",
+      "role": "primary",
+      "required": true,
+      "fully_in_frame": true,
+      "min_area_ratio": 0.005,
+      "max_area_ratio": 0.7
+    },
+    {
+      "id": "sphere",
+      "role": "primary",
+      "required": true,
+      "fully_in_frame": true,
+      "min_area_ratio": 0.005,
+      "max_area_ratio": 0.7,
+      "active_intervals": [
+        [
+          1,
+          3
+        ]
+      ]
+    }
+  ],
+  "camera": {
+    "pitch_deg_range": [
+      -70,
+      15
+    ],
+    "height_range": [
+      0.5,
+      12
+    ]
+  },
+  "collision": {
+    "forbidden_pairs": [
+      [
+        "cube",
+        "sphere"
+      ]
+    ],
+    "allowed_pairs": [],
+    "tolerance": 0.001
+  },
+  "evaluation": {
+    "pass_score": 75,
+    "hard_fail_score_cap": 40
+  }
+}

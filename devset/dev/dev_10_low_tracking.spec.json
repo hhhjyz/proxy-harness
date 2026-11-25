@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "task_id": "dev_10_low_tracking",
+  "prompt": "A small box-shaped vehicle travels forward along a straight floor path beside a stationary cone. A low camera tracks the vehicle gently, keeping both vehicle and cone completely visible. Avoid a top-down angle and any collision.",
+  "split": "dev",
+  "seed": 2110,
+  "duration_s": 3,
+  "fps": 12,
+  "width": 640,
+  "height": 360,
+  "sample_times": [
+    0,
+    0.5,
+    1,
+    1.5,
+    2,
+    2.5,
+    2.916667
+  ],
+  "subjects": [
+    {
+      "id": "vehicle",
+      "role": "primary",
+      "required": true,
+      "fully_in_frame": true,
+      "min_area_ratio": 0.005,
+      "max_area_ratio": 0.7
+    },
+    {
+      "id": "cone",
+      "role": "primary",
+      "required": true,
+      "fully_in_frame": true,
+      "min_area_ratio": 0.005,
+      "max_area_ratio": 0.7
+    }
+  ],
+  "camera": {
+    "pitch_deg_range": [
+      -20,
+      15
+    ],
+    "height_range": [
+      0.5,
+      3
+    ]
+  },
+  "collision": {
+    "forbidden_pairs": [
+      [
+        "vehicle",
+        "cone"
+      ]
+    ],
+    "allowed_pairs": [],
+    "tolerance": 0.001
+  },
+  "evaluation": {
+    "pass_score": 75,
+    "hard_fail_score_cap": 40
+  }
+}

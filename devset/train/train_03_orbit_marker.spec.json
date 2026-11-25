@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "task_id": "train_03_orbit_marker",
+  "prompt": "A small sphere completes one horizontal orbit around a stationary cylinder. Leave a clear gap between the objects. Use an elevated fixed camera so the orbit and both complete objects remain easy to see.",
+  "split": "train",
+  "seed": 1103,
+  "duration_s": 3,
+  "fps": 12,
+  "width": 640,
+  "height": 360,
+  "sample_times": [
+    0,
+    0.5,
+    1,
+    1.5,
+    2,
+    2.5,
+    2.916667
+  ],
+  "subjects": [
+    {
+      "id": "orbiter",
+      "role": "primary",
+      "required": true,
+      "fully_in_frame": true,
+      "min_area_ratio": 0.005,
+      "max_area_ratio": 0.7
+    },
+    {
+      "id": "cylinder",
+      "role": "primary",
+      "required": true,
+      "fully_in_frame": true,
+      "min_area_ratio": 0.005,
+      "max_area_ratio": 0.7
+    }
+  ],
+  "camera": {
+    "pitch_deg_range": [
+      -70,
+      15
+    ],
+    "height_range": [
+      0.5,
+      12
+    ]
+  },
+  "collision": {
+    "forbidden_pairs": [
+      [
+        "orbiter",
+        "cylinder"
+      ]
+    ],
+    "allowed_pairs": [],
+    "tolerance": 0.001
+  },
+  "evaluation": {
+    "pass_score": 75,
+    "hard_fail_score_cap": 40
+  }
+}

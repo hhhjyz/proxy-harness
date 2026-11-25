@@ -1,0 +1,27 @@
+{
+  "exit_code": 1,
+  "timed_out": false,
+  "elapsed_s": 10.039,
+  "backend": "codex",
+  "role": "coder",
+  "session_id": null,
+  "session_continued": false,
+  "argv": [
+    "codex",
+    "-a",
+    "never",
+    "-s",
+    "workspace-write",
+    "exec",
+    "-C",
+    "/workspace/scratch/bbcc99ac5c90/proxy-harness-v1/validation/live_smoke/workspace",
+    "--json",
+    "--skip-git-repo-check",
+    "-o",
+    "/workspace/scratch/bbcc99ac5c90/proxy-harness-v1/validation/live_smoke/workspace/.coder-last-message.txt",
+    "-"
+  ],
+  "output": "",
+  "evidence_mode": "live",
+  "output_file": "/workspace/scratch/bbcc99ac5c90/proxy-harness-v1/validation/live_smoke/workspace/.coder-last-message.txt"
+}

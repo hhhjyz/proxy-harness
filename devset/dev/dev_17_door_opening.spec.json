@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "task_id": "dev_17_door_opening",
+  "prompt": "A rectangular door panel opens smoothly from closed to a right angle inside a simple freestanding frame. The panel rotates about its side hinge and never detaches. Show the complete panel and frame throughout from a fixed oblique view.",
+  "split": "dev",
+  "seed": 2117,
+  "duration_s": 3,
+  "fps": 12,
+  "width": 640,
+  "height": 360,
+  "sample_times": [
+    0,
+    0.5,
+    1,
+    1.5,
+    2,
+    2.5,
+    2.916667
+  ],
+  "subjects": [
+    {
+      "id": "door_panel",
+      "role": "primary",
+      "required": true,
+      "fully_in_frame": true,
+      "min_area_ratio": 0.005,
+      "max_area_ratio": 0.7
+    },
+    {
+      "id": "door_frame",
+      "role": "primary",
+      "required": true,
+      "fully_in_frame": true,
+      "min_area_ratio": 0.005,
+      "max_area_ratio": 0.7
+    }
+  ],
+  "camera": {
+    "pitch_deg_range": [
+      -70,
+      15
+    ],
+    "height_range": [
+      0.5,
+      12
+    ]
+  },
+  "collision": {
+    "forbidden_pairs": [],
+    "allowed_pairs": [
+      [
+        "door_panel",
+        "door_frame"
+      ]
+    ],
+    "tolerance": 0.001
+  },
+  "evaluation": {
+    "pass_score": 75,
+    "hard_fail_score_cap": 40
+  }
+}

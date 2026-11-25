@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "task_id": "demo_neutral_motion",
+  "prompt": "A neutral gray ball rolls slowly to the right toward a stationary gray cube, remaining separated. Both objects stay completely in frame. Use a simple ground plane and a fixed elevated camera. This is a hand-authored infrastructure demo, not a model-generated result.",
+  "split": "demo",
+  "seed": 42,
+  "duration_s": 3,
+  "fps": 12,
+  "width": 640,
+  "height": 360,
+  "sample_times": [
+    0,
+    0.5,
+    1,
+    1.5,
+    2,
+    2.5,
+    2.916667
+  ],
+  "subjects": [
+    {
+      "id": "ball",
+      "role": "primary",
+      "required": true,
+      "fully_in_frame": true,
+      "min_area_ratio": 0.005,
+      "max_area_ratio": 0.7
+    },
+    {
+      "id": "cube",
+      "role": "primary",
+      "required": true,
+      "fully_in_frame": true,
+      "min_area_ratio": 0.005,
+      "max_area_ratio": 0.7
+    },
+    {
+      "id": "ground",
+      "role": "ground",
+      "required": false,
+      "fully_in_frame": false,
+      "min_area_ratio": 0,
+      "max_area_ratio": 1
+    }
+  ],
+  "camera": {
+    "pitch_deg_range": [
+      -50,
+      -10
+    ],
+    "height_range": [
+      2,
+      6
+    ]
+  },
+  "collision": {
+    "forbidden_pairs": [
+      [
+        "ball",
+        "cube"
+      ]
+    ],
+    "allowed_pairs": [],
+    "tolerance": 0.001
+  },
+  "evaluation": {
+    "pass_score": 75,
+    "hard_fail_score_cap": 40
+  }
+}

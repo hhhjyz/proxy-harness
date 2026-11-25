@@ -1,0 +1,13 @@
+{
+  "coder": { "backend": "codex", "timeout_s": 240 },
+  "evaluator": {
+    "backend": "chat_completions",
+    "url": "https://YOUR_PROVIDER/v1/chat/completions",
+    "model": "YOUR_VISION_MODEL",
+    "api_key_env": "PROXY_EVALUATOR_API_KEY",
+    "timeout_s": 120,
+    "parameters": { "response_format": { "type": "json_object" } }
+  },
+  "max_iterations": 3,
+  "render": { "backend": "swiftshader", "timeout_s": 120 }
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "task_id": "train_05_staggered_lift",
+  "prompt": "Two separated blocks start on the floor. The left block rises smoothly during the first half; the right block rises during the second half. Both finish suspended at the same height. Use a fixed camera and keep both blocks fully visible.",
+  "split": "train",
+  "seed": 1105,
+  "duration_s": 3,
+  "fps": 12,
+  "width": 640,
+  "height": 360,
+  "sample_times": [
+    0,
+    0.5,
+    1,
+    1.5,
+    2,
+    2.5,
+    2.916667
+  ],
+  "subjects": [
+    {
+      "id": "left_block",
+      "role": "primary",
+      "required": true,
+      "fully_in_frame": true,
+      "min_area_ratio": 0.005,
+      "max_area_ratio": 0.7
+    },
+    {
+      "id": "right_block",
+      "role": "primary",
+      "required": true,
+      "fully_in_frame": true,
+      "min_area_ratio": 0.005,
+      "max_area_ratio": 0.7
+    }
+  ],
+  "camera": {
+    "pitch_deg_range": [
+      -70,
+      15
+    ],
+    "height_range": [
+      0.5,
+      12
+    ]
+  },
+  "collision": {
+    "forbidden_pairs": [
+      [
+        "left_block",
+        "right_block"
+      ]
+    ],
+    "allowed_pairs": [],
+    "tolerance": 0.001
+  },
+  "evaluation": {
+    "pass_score": 75,
+    "hard_fail_score_cap": 40
+  }
+}

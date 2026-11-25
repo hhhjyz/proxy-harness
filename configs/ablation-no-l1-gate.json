@@ -1,0 +1,6 @@
+{
+  "coder": { "backend": "codex", "timeout_s": 240 },
+  "evaluator": { "backend": "codex", "timeout_s": 180 },
+  "max_iterations": 3,
+  "ablations": { "feedback": true, "l1_gate": false, "independent_eval": true }
+}

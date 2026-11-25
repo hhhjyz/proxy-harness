@@ -1,0 +1,16 @@
+{
+  "status": "error",
+  "score": null,
+  "subject_complete": null,
+  "issues": [
+    {
+      "code": "evaluator_error",
+      "message": "Evaluator CLI failed; see evaluator.stderr.log",
+      "repair": "Check evaluator configuration and raw response; never substitute a passing score."
+    }
+  ],
+  "summary": "Independent evaluation failed.",
+  "effective_score": null,
+  "backend": "codex",
+  "evidence_mode": "unverified"
+}

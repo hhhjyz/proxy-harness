@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0",
+  "task_id": "holdout_01_carousel_pair",
+  "prompt": "Two different small boxes are carried on opposite sides of a rotating circular platform. The platform makes a quarter turn while a fixed elevated camera keeps the complete assembly visible. The boxes retain their spacing and stay supported.",
+  "split": "holdout",
+  "seed": 3101,
+  "duration_s": 3,
+  "fps": 12,
+  "width": 640,
+  "height": 360,
+  "sample_times": [
+    0,
+    0.5,
+    1,
+    1.5,
+    2,
+    2.5,
+    2.916667
+  ],
+  "subjects": [
+    {
+      "id": "platform",
+      "role": "primary",
+      "required": true,
+      "fully_in_frame": true,
+      "min_area_ratio": 0.005,
+      "max_area_ratio": 0.7
+    },
+    {
+      "id": "box_a",
+      "role": "primary",
+      "required": true,
+      "fully_in_frame": true,
+      "min_area_ratio": 0.005,
+      "max_area_ratio": 0.7
+    },
+    {
+      "id": "box_b",
+      "role": "primary",
+      "required": true,
+      "fully_in_frame": true,
+      "min_area_ratio": 0.005,
+      "max_area_ratio": 0.7
+    }
+  ],
+  "camera": {
+    "pitch_deg_range": [
+      -70,
+      15
+    ],
+    "height_range": [
+      0.5,
+      12
+    ]
+  },
+  "collision": {
+    "forbidden_pairs": [
+      [
+        "box_a",
+        "box_b"
+      ]
+    ],
+    "allowed_pairs": [
+      [
+        "platform",
+        "box_a"
+      ],
+      [
+        "platform",
+        "box_b"
+      ]
+    ],
+    "tolerance": 0.001
+  },
+  "evaluation": {
+    "pass_score": 75,
+    "hard_fail_score_cap": 40
+  }
+}

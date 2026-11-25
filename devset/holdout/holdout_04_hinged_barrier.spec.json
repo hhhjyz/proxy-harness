@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0",
+  "task_id": "holdout_04_hinged_barrier",
+  "prompt": "A simple barrier arm rotates upward around one end on a short post. A stationary sphere beside the post provides scale. Keep the arm attached and show the complete arm, post and sphere from a fixed oblique view.",
+  "split": "holdout",
+  "seed": 3104,
+  "duration_s": 3,
+  "fps": 12,
+  "width": 640,
+  "height": 360,
+  "sample_times": [
+    0,
+    0.5,
+    1,
+    1.5,
+    2,
+    2.5,
+    2.916667
+  ],
+  "subjects": [
+    {
+      "id": "arm",
+      "role": "primary",
+      "required": true,
+      "fully_in_frame": true,
+      "min_area_ratio": 0.005,
+      "max_area_ratio": 0.7
+    },
+    {
+      "id": "post",
+      "role": "primary",
+      "required": true,
+      "fully_in_frame": true,
+      "min_area_ratio": 0.005,
+      "max_area_ratio": 0.7
+    },
+    {
+      "id": "sphere",
+      "role": "primary",
+      "required": true,
+      "fully_in_frame": true,
+      "min_area_ratio": 0.005,
+      "max_area_ratio": 0.7
+    }
+  ],
+  "camera": {
+    "pitch_deg_range": [
+      -70,
+      15
+    ],
+    "height_range": [
+      0.5,
+      12
+    ]
+  },
+  "collision": {
+    "forbidden_pairs": [
+      [
+        "arm",
+        "sphere"
+      ],
+      [
+        "post",
+        "sphere"
+      ]
+    ],
+    "allowed_pairs": [
+      [
+        "arm",
+        "post"
+      ]
+    ],
+    "tolerance": 0.001
+  },
+  "evaluation": {
+    "pass_score": 75,
+    "hard_fail_score_cap": 40
+  }
+}

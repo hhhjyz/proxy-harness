@@ -1,0 +1,10 @@
+{
+  "status": "skipped",
+  "score": null,
+  "subject_complete": null,
+  "issues": [],
+  "summary": "Independent VLM is not configured; this run is unverified.",
+  "effective_score": null,
+  "backend": "none",
+  "evidence_mode": "unverified"
+}

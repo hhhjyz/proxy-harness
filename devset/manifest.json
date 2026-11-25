@@ -1,0 +1,445 @@
+{
+  "schema_version": "1.0",
+  "dataset_id": "proxy-harness-original-36-v1",
+  "provenance": "Original synthetic scene specifications authored for this project; not CodeVideoBench tasks or an official benchmark reproduction.",
+  "hash_policy": "SHA-256 over canonical UTF-8 JSON: sorted keys, comma/colon separators, ensure_ascii=False, no NaN. Spec hashes use validate_spec normalized objects.",
+  "split_policy": {
+    "train": "6 cases; the only source of distillation evidence",
+    "dev": "24 cases; complete paired admission only",
+    "holdout": "6 cases; reserved final evaluation, never distillation or admission"
+  },
+  "tasks": [
+    {
+      "task_id": "train_01_static_pair",
+      "split": "train",
+      "seed": 1101,
+      "spec_path": "train/train_01_static_pair.spec.json",
+      "spec_sha256": "ace121e9a3d7f1f9c16547f98c29e853cced1cd4dec246a789b5d4dac5519465",
+      "coverage": [
+        "registration",
+        "framing",
+        "basic_geometry"
+      ]
+    },
+    {
+      "task_id": "train_02_straight_cart",
+      "split": "train",
+      "seed": 1102,
+      "spec_path": "train/train_02_straight_cart.spec.json",
+      "spec_sha256": "47df79b9fdde4e9568f08e1d59a7b8bc900df020b014bf06ef605813c6e3fd66",
+      "coverage": [
+        "linear_motion",
+        "boundary_framing",
+        "stopping"
+      ]
+    },
+    {
+      "task_id": "train_03_orbit_marker",
+      "split": "train",
+      "seed": 1103,
+      "spec_path": "train/train_03_orbit_marker.spec.json",
+      "spec_sha256": "0519e5f4286e629f0f56fed0b2ca1a0ac5566e22521dbb16713f52930b7b6d94",
+      "coverage": [
+        "periodic_motion",
+        "separation",
+        "absolute_time"
+      ]
+    },
+    {
+      "task_id": "train_04_gentle_dolly",
+      "split": "train",
+      "seed": 1104,
+      "spec_path": "train/train_04_gentle_dolly.spec.json",
+      "spec_sha256": "9a11af5011272d008446d469a1733a262ac1e7f3e40d9d7bf387ee782501011f",
+      "coverage": [
+        "camera_dolly",
+        "screen_coverage",
+        "target_tracking"
+      ]
+    },
+    {
+      "task_id": "train_05_staggered_lift",
+      "split": "train",
+      "seed": 1105,
+      "spec_path": "train/train_05_staggered_lift.spec.json",
+      "spec_sha256": "e11646a6a4eb6a2f33782488ed2d5ac8a20b95ff41635926f92315e095ecaa1f",
+      "coverage": [
+        "timing",
+        "multiple_subjects",
+        "independent_state"
+      ]
+    },
+    {
+      "task_id": "train_06_roll_and_stop",
+      "split": "train",
+      "seed": 1106,
+      "spec_path": "train/train_06_roll_and_stop.spec.json",
+      "spec_sha256": "a00435a736ab27ec96bc6d37a3b20da18a991216ba9c4211a3293539cb29e8dd",
+      "coverage": [
+        "rolling",
+        "collision_clearance",
+        "stop_timing"
+      ]
+    },
+    {
+      "task_id": "dev_01_three_silhouettes",
+      "split": "dev",
+      "seed": 2101,
+      "spec_path": "dev/dev_01_three_silhouettes.spec.json",
+      "spec_sha256": "a9aa4238ad3892eef38b3c0d4d43830b49043a195f61b11863ee464937513dac",
+      "coverage": [
+        "layout",
+        "subject_completeness",
+        "silhouette"
+      ]
+    },
+    {
+      "task_id": "dev_02_depth_stagger",
+      "split": "dev",
+      "seed": 2102,
+      "spec_path": "dev/dev_02_depth_stagger.spec.json",
+      "spec_sha256": "5940cc4b203d965b2dbf8fc45e5e497336716cf7a33ac9978c5128149634a04d",
+      "coverage": [
+        "depth_order",
+        "framing",
+        "multiple_subjects"
+      ]
+    },
+    {
+      "task_id": "dev_03_wide_composition",
+      "split": "dev",
+      "seed": 2103,
+      "spec_path": "dev/dev_03_wide_composition.spec.json",
+      "spec_sha256": "ca06a60591448f3a60cb6781acfa9c23a835849ead12c0a7d2269a79ed9c6ab0",
+      "coverage": [
+        "screen_coverage",
+        "boundary_framing",
+        "scale_contrast"
+      ]
+    },
+    {
+      "task_id": "dev_04_foreground_landmark",
+      "split": "dev",
+      "seed": 2104,
+      "spec_path": "dev/dev_04_foreground_landmark.spec.json",
+      "spec_sha256": "46a6ed238ae7985b3dec0d2c26383a73752961a8ffecc9487b776946e678d119",
+      "coverage": [
+        "occlusion_avoidance",
+        "depth",
+        "curved_motion"
+      ]
+    },
+    {
+      "task_id": "dev_05_curved_car",
+      "split": "dev",
+      "seed": 2105,
+      "spec_path": "dev/dev_05_curved_car.spec.json",
+      "spec_sha256": "1bd339e228810f184996dea1e6440ae610ba0d060f389d36c008481d63918901",
+      "coverage": [
+        "trajectory",
+        "orientation",
+        "clearance"
+      ]
+    },
+    {
+      "task_id": "dev_06_figure_eight",
+      "split": "dev",
+      "seed": 2106,
+      "spec_path": "dev/dev_06_figure_eight.spec.json",
+      "spec_sha256": "04baa6d584682c5d1a594be7fc32ff532e581c017316247b6f9e08c32d3e0509",
+      "coverage": [
+        "trajectory",
+        "continuity",
+        "absolute_time"
+      ]
+    },
+    {
+      "task_id": "dev_07_pause_resume",
+      "split": "dev",
+      "seed": 2107,
+      "spec_path": "dev/dev_07_pause_resume.spec.json",
+      "spec_sha256": "ce54826d97036e92eab30bb20d608d7cd11d4284bc23f46f2385eae0da159635",
+      "coverage": [
+        "temporal_control",
+        "pause",
+        "continuity"
+      ]
+    },
+    {
+      "task_id": "dev_08_bounce_near_marker",
+      "split": "dev",
+      "seed": 2108,
+      "spec_path": "dev/dev_08_bounce_near_marker.spec.json",
+      "spec_sha256": "b33088e93d36f44e9cfcfa2594151a9e428cda3f01106f96b07081ff93168879",
+      "coverage": [
+        "vertical_motion",
+        "event_timing",
+        "floor_contact"
+      ]
+    },
+    {
+      "task_id": "dev_09_camera_orbit",
+      "split": "dev",
+      "seed": 2109,
+      "spec_path": "dev/dev_09_camera_orbit.spec.json",
+      "spec_sha256": "071de121fc4927d19ef3fdad83dd3c9fde14fbe81d88f9732240fec84045095a",
+      "coverage": [
+        "camera_orbit",
+        "world_state",
+        "framing"
+      ]
+    },
+    {
+      "task_id": "dev_10_low_tracking",
+      "split": "dev",
+      "seed": 2110,
+      "spec_path": "dev/dev_10_low_tracking.spec.json",
+      "spec_sha256": "3682310b574398bdd35f9e514bdf0d675a5692c12cee24ead7520ce94ec8e51f",
+      "coverage": [
+        "low_camera",
+        "tracking",
+        "camera_height"
+      ]
+    },
+    {
+      "task_id": "dev_11_high_follow",
+      "split": "dev",
+      "seed": 2111,
+      "spec_path": "dev/dev_11_high_follow.spec.json",
+      "spec_sha256": "a4f85a922e5f440dc3c846d3c69880db10241da1b88663467aacc6624f5627c0",
+      "coverage": [
+        "high_camera",
+        "tracking",
+        "camera_pitch"
+      ]
+    },
+    {
+      "task_id": "dev_12_two_camera_shots",
+      "split": "dev",
+      "seed": 2112,
+      "spec_path": "dev/dev_12_two_camera_shots.spec.json",
+      "spec_sha256": "d3d0bc05281a3a02615ea148cb3eb1c0dce7d69c4c960c4e4a259127ba28ea06",
+      "coverage": [
+        "camera_cut",
+        "state_preservation",
+        "timing"
+      ]
+    },
+    {
+      "task_id": "dev_13_approach_contact",
+      "split": "dev",
+      "seed": 2113,
+      "spec_path": "dev/dev_13_approach_contact.spec.json",
+      "spec_sha256": "934b34bcae982e53886f266b41717e774f16b8b0646027db6f5e30a6ef9735a3",
+      "coverage": [
+        "contact",
+        "causality",
+        "nonpenetration"
+      ]
+    },
+    {
+      "task_id": "dev_14_passing_lanes",
+      "split": "dev",
+      "seed": 2114,
+      "spec_path": "dev/dev_14_passing_lanes.spec.json",
+      "spec_sha256": "b2dab5d268b0b714a6c7f364d4ccb6bd8f89acc3e65b827d5f10553ff3e80349",
+      "coverage": [
+        "multiple_motion",
+        "collision_clearance",
+        "direction"
+      ]
+    },
+    {
+      "task_id": "dev_15_ramp_roll",
+      "split": "dev",
+      "seed": 2115,
+      "spec_path": "dev/dev_15_ramp_roll.spec.json",
+      "spec_sha256": "8bcb36cb66069960765a4d6c5e6970a8bfafe54b4b2c4ef7157e927d406c5589",
+      "coverage": [
+        "support_contact",
+        "inclined_motion",
+        "geometry"
+      ]
+    },
+    {
+      "task_id": "dev_16_pendulum",
+      "split": "dev",
+      "seed": 2116,
+      "spec_path": "dev/dev_16_pendulum.spec.json",
+      "spec_sha256": "6e3bece566c418d96fc2028a74fdf80993fbe5cdf031a64d028b7e6fc2fc41b5",
+      "coverage": [
+        "articulation",
+        "periodic_motion",
+        "connection"
+      ]
+    },
+    {
+      "task_id": "dev_17_door_opening",
+      "split": "dev",
+      "seed": 2117,
+      "spec_path": "dev/dev_17_door_opening.spec.json",
+      "spec_sha256": "7c8acd2e06af2190532e4e4dde466559cb4d0e2d8ada9c8f53998a21b803b849",
+      "coverage": [
+        "hinge",
+        "articulation",
+        "structural_completeness"
+      ]
+    },
+    {
+      "task_id": "dev_18_drawer_slide",
+      "split": "dev",
+      "seed": 2118,
+      "spec_path": "dev/dev_18_drawer_slide.spec.json",
+      "spec_sha256": "384d53ee2d9d5615739cb990f81488ca45b88e568f807d20647a6319ee0ee526",
+      "coverage": [
+        "relative_motion",
+        "containment",
+        "stopping"
+      ]
+    },
+    {
+      "task_id": "dev_19_cargo_lift",
+      "split": "dev",
+      "seed": 2119,
+      "spec_path": "dev/dev_19_cargo_lift.spec.json",
+      "spec_sha256": "e64b635900e73d0ac34b82009f6c84c4f78a082cb06a39b205562bdf85361ba4",
+      "coverage": [
+        "support_contact",
+        "coupled_motion",
+        "relative_state"
+      ]
+    },
+    {
+      "task_id": "dev_20_turntable",
+      "split": "dev",
+      "seed": 2120,
+      "spec_path": "dev/dev_20_turntable.spec.json",
+      "spec_sha256": "c441347c2d4e5cdd6d473f67df61d7122dc03fd5e3bb80a4401aeeb7fa98dda2",
+      "coverage": [
+        "parent_transform",
+        "rotation",
+        "support_contact"
+      ]
+    },
+    {
+      "task_id": "dev_21_counter_rotation",
+      "split": "dev",
+      "seed": 2121,
+      "spec_path": "dev/dev_21_counter_rotation.spec.json",
+      "spec_sha256": "8dab917433c0da1744da6cf2a98fcbca43066de02e680ff1d7df7d8cf048b4aa",
+      "coverage": [
+        "camera_object_decoupling",
+        "world_reference",
+        "rotation"
+      ]
+    },
+    {
+      "task_id": "dev_22_crossing_heights",
+      "split": "dev",
+      "seed": 2122,
+      "spec_path": "dev/dev_22_crossing_heights.spec.json",
+      "spec_sha256": "2f97afa3532262cf57ee05d199b5c6b5f766267d52a59d208ce20a5c82de018a",
+      "coverage": [
+        "3d_clearance",
+        "multiple_motion",
+        "depth_cues"
+      ]
+    },
+    {
+      "task_id": "dev_23_scheduled_entry",
+      "split": "dev",
+      "seed": 2123,
+      "spec_path": "dev/dev_23_scheduled_entry.spec.json",
+      "spec_sha256": "4b482788f806b62a4a8164a6977c40fc512833f57d255c43f02f4f8f27630196",
+      "coverage": [
+        "active_intervals",
+        "entry_timing",
+        "framing"
+      ]
+    },
+    {
+      "task_id": "dev_24_reversible_scale",
+      "split": "dev",
+      "seed": 2124,
+      "spec_path": "dev/dev_24_reversible_scale.spec.json",
+      "spec_sha256": "08e6046a397f803566a46aa63cdd310cc166e9ce4ec49b2dddaf20a8ef503788",
+      "coverage": [
+        "absolute_state",
+        "scale_change",
+        "grounding"
+      ]
+    },
+    {
+      "task_id": "holdout_01_carousel_pair",
+      "split": "holdout",
+      "seed": 3101,
+      "spec_path": "holdout/holdout_01_carousel_pair.spec.json",
+      "spec_sha256": "36b07943702fbbe6f89465aa1a872185c1c034a7efc95e5aa7b1dba1d07cc40b",
+      "coverage": [
+        "coupled_motion",
+        "multiple_subjects",
+        "support"
+      ]
+    },
+    {
+      "task_id": "holdout_02_offset_crossing",
+      "split": "holdout",
+      "seed": 3102,
+      "spec_path": "holdout/holdout_02_offset_crossing.spec.json",
+      "spec_sha256": "29bd003018db20477145402110d82f9be56f62e3ba2f0eeb84612a493b245bdd",
+      "coverage": [
+        "trajectory",
+        "depth_separation",
+        "timing"
+      ]
+    },
+    {
+      "task_id": "holdout_03_lift_and_orbit",
+      "split": "holdout",
+      "seed": 3103,
+      "spec_path": "holdout/holdout_03_lift_and_orbit.spec.json",
+      "spec_sha256": "fa0e3ab122d93a67ec0e5dadff8d2c2c349bdb664679a9631fd41f9ad416070c",
+      "coverage": [
+        "camera_object_decoupling",
+        "vertical_motion",
+        "framing"
+      ]
+    },
+    {
+      "task_id": "holdout_04_hinged_barrier",
+      "split": "holdout",
+      "seed": 3104,
+      "spec_path": "holdout/holdout_04_hinged_barrier.spec.json",
+      "spec_sha256": "192cca4630ce2a46b0b9cd2e528e25ba7e6e7002ea4f1e5d530eec7ce6ea4d9e",
+      "coverage": [
+        "articulation",
+        "structural_completeness",
+        "scale"
+      ]
+    },
+    {
+      "task_id": "holdout_05_follow_stop_return",
+      "split": "holdout",
+      "seed": 3105,
+      "spec_path": "holdout/holdout_05_follow_stop_return.spec.json",
+      "spec_sha256": "fdf5117a77866de923949cbf9d0fb01c00c95b8a37ce3689b6eccf9e54dabf08",
+      "coverage": [
+        "temporal_control",
+        "tracking",
+        "reverse_motion"
+      ]
+    },
+    {
+      "task_id": "holdout_06_expanding_triangle",
+      "split": "holdout",
+      "seed": 3106,
+      "spec_path": "holdout/holdout_06_expanding_triangle.spec.json",
+      "spec_sha256": "8d892947d0f3bc7f1c1dfd52836221594d27f1643e2ee593dbcc5eb1ea3bb528",
+      "coverage": [
+        "multiple_subjects",
+        "layout_change",
+        "boundary_framing"
+      ]
+    }
+  ]
+}

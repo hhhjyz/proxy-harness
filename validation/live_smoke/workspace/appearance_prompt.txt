@@ -1,0 +1,2 @@
+A ball rolls to the right toward a stationary cube, slows down and stops before touching it. Both subjects stay fully inside the main camera view on a simple ground plane. Use a fixed elevated camera and neutral gray proxy materials. Final-video appearance binding: ball is matte ivory ceramic; cube is dark brushed metal. Preserve geometry and motion but put those finished appearances only in appearance_prompt.txt.
+Bind every subject by its Scene Spec id. Structural proxy colors are not final appearance.

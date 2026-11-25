@@ -1,0 +1,2 @@
+A neutral gray ball rolls slowly to the right toward a stationary gray cube, remaining separated. Both objects stay completely in frame. Use a simple ground plane and a fixed elevated camera. This is a hand-authored infrastructure demo, not a model-generated result.
+Bind every subject by its Scene Spec id. Structural proxy colors are not final appearance.

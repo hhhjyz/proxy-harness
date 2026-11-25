@@ -1,0 +1,10 @@
+{
+  "coder": {
+    "backend": "command",
+    "argv": ["YOUR_AGENT_WRAPPER", "--workspace", "{workspace}", "--prompt-file", "{prompt_file}", "--output-file", "{output_file}"],
+    "resume_argv": ["YOUR_AGENT_WRAPPER", "--workspace", "{workspace}", "--resume", "{session_id}", "--prompt-file", "{prompt_file}", "--output-file", "{output_file}"],
+    "timeout_s": 240
+  },
+  "evaluator": { "backend": "none" },
+  "max_iterations": 3
+}

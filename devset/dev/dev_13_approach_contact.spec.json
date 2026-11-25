@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "task_id": "dev_13_approach_contact",
+  "prompt": "A sphere rolls toward a stationary box and comes to rest at its side without passing through it. Show the approach, the contact and the settled state. Use a fixed camera that keeps both complete objects visible.",
+  "split": "dev",
+  "seed": 2113,
+  "duration_s": 3,
+  "fps": 12,
+  "width": 640,
+  "height": 360,
+  "sample_times": [
+    0,
+    0.5,
+    1,
+    1.5,
+    2,
+    2.5,
+    2.916667
+  ],
+  "subjects": [
+    {
+      "id": "sphere",
+      "role": "primary",
+      "required": true,
+      "fully_in_frame": true,
+      "min_area_ratio": 0.005,
+      "max_area_ratio": 0.7
+    },
+    {
+      "id": "box",
+      "role": "primary",
+      "required": true,
+      "fully_in_frame": true,
+      "min_area_ratio": 0.005,
+      "max_area_ratio": 0.7
+    }
+  ],
+  "camera": {
+    "pitch_deg_range": [
+      -70,
+      15
+    ],
+    "height_range": [
+      0.5,
+      12
+    ]
+  },
+  "collision": {
+    "forbidden_pairs": [],
+    "allowed_pairs": [
+      [
+        "sphere",
+        "box"
+      ]
+    ],
+    "tolerance": 0.001
+  },
+  "evaluation": {
+    "pass_score": 75,
+    "hard_fail_score_cap": 40
+  }
+}

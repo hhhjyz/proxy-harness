@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "task_id": "train_live_smoke",
+  "split": "train",
+  "seed": 42,
+  "spec_sha256": "088f7f479842087a5f3b85e06700e1276b3e457075c6c68a790326107d15eb72",
+  "status": "error",
+  "hard_pass": false,
+  "subject_complete": null,
+  "score": null,
+  "code_lines": 42,
+  "primitive_count": 3,
+  "selected_iteration": 0,
+  "best_valid_iteration": null,
+  "evidence_dir": "iter_00",
+  "model_mode": "unverified",
+  "coder_backend": "codex",
+  "evaluator_backend": "codex",
+  "is_ablation": false,
+  "asset_sha256": "e104a11f9cc45e5c6412df4fabe8bc3f675a9f31004fe48b426a770cd3c170bf",
+  "iterations": 1,
+  "elapsed_s": 15.699
+}

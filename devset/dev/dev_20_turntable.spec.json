@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "task_id": "dev_20_turntable",
+  "prompt": "A rectangular box sits off-center on a round turntable. The turntable rotates slowly through half a turn and carries the box with it. Preserve the contact and relative placement. Keep the full box and turntable visible from a fixed elevated view.",
+  "split": "dev",
+  "seed": 2120,
+  "duration_s": 3,
+  "fps": 12,
+  "width": 640,
+  "height": 360,
+  "sample_times": [
+    0,
+    0.5,
+    1,
+    1.5,
+    2,
+    2.5,
+    2.916667
+  ],
+  "subjects": [
+    {
+      "id": "turntable",
+      "role": "primary",
+      "required": true,
+      "fully_in_frame": true,
+      "min_area_ratio": 0.005,
+      "max_area_ratio": 0.7
+    },
+    {
+      "id": "box",
+      "role": "primary",
+      "required": true,
+      "fully_in_frame": true,
+      "min_area_ratio": 0.005,
+      "max_area_ratio": 0.7
+    }
+  ],
+  "camera": {
+    "pitch_deg_range": [
+      -70,
+      15
+    ],
+    "height_range": [
+      0.5,
+      12
+    ]
+  },
+  "collision": {
+    "forbidden_pairs": [],
+    "allowed_pairs": [
+      [
+        "turntable",
+        "box"
+      ]
+    ],
+    "tolerance": 0.001
+  },
+  "evaluation": {
+    "pass_score": 75,
+    "hard_fail_score_cap": 40
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "skills-index.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+  "render_and_check.py": "b528bed4830ba9ecfe27a220e409978c7ee5f5d4b6592eb96bcb7e0e126b07d9",
+  "primitives.js": "b7b9049a7b89df708f070edba2a909da38d0d13592e603bd27a09b50c1cdee76",
+  "spec.json": "28eb0a30077753aea6bc35f73994ad3f14629a9e8aa26f1a2b9a2e94a6458796",
+  "AGENTS.md": "9a13d140db58da5d6a8e734c6640522cafffad55a4e0ccf31feaeb645aa755a0",
+  "runtime.js": "689c56337dadd972adf791530f47924b2e2341a4b5ffca3f2e4f23e7fa92ce0a",
+  "vendor/three.module.js": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a",
+  "vendor/three.core.js": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
+  "vendor/dependency.json": "beb985462b336d3033ab246a9a6bc7c4263723f991d30d6b5d6fc3dd82f48cc0",
+  "vendor/LICENSE.three.txt": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601"
+}

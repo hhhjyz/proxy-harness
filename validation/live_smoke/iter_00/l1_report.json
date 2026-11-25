@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "hard_pass": false,
+  "failures": [
+    {
+      "code": "output_integrity",
+      "message": "Coder exited unsuccessfully: 1",
+      "repair": "Restore protected files and produce both requested scene outputs."
+    }
+  ],
+  "warnings": [
+    {
+      "code": "undeclared_subject",
+      "message": "Registered subject 'ground' is not described by the spec.",
+      "repair": "Declare it in subjects if its behavior should be evaluated; background/ground/decoration can use passive roles.",
+      "subject": "ground"
+    }
+  ],
+  "metrics": {
+    "manifest_count": 7,
+    "valid_manifest_count": 7,
+    "exact_collision_checks": 7,
+    "unverified_collision_checks": 0,
+    "requested_sample_count": 7,
+    "required_subject_count": 2,
+    "determinism_passed": true,
+    "forbidden_pair_count": 1,
+    "primitive_count": 3,
+    "sampled_primitive_count_range": [
+      3,
+      3
+    ],
+    "camera_height_range": [
+      4,
+      4
+    ],
+    "camera_pitch_deg_range": [
+      -22.99170088140582,
+      -22.99170088140582
+    ],
+    "subject_area_ranges": {
+      "ball": [
+        0.006682838099807685,
+        0.007456858941930413
+      ],
+      "cube": [
+        0.01564227683980062,
+        0.01564227683980062
+      ]
+    },
+    "sample_times_checked": [
+      0,
+      0.5,
+      1,
+      1.5,
+      2,
+      2.5,
+      2.916667
+    ],
+    "scope": "sampled_times; projection is not an occlusion test; exact collision only for supported colliders"
+  }
+}

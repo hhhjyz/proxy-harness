@@ -1,0 +1,8 @@
+{
+  "coder": { "backend": "codex", "timeout_s": 240 },
+  "evaluator": { "backend": "codex", "timeout_s": 180 },
+  "max_iterations": 3,
+  "render": { "backend": "swiftshader", "timeout_s": 120 },
+  "export_video": false,
+  "ablations": { "feedback": true, "l1_gate": true, "independent_eval": true }
+}

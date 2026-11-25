@@ -1,0 +1,47 @@
+--- iter_-1/scene.html
++++ iter_00/scene.html
+@@ -0,0 +1,44 @@
++<!doctype html>
++<html lang="en">
++<head>
++  <meta charset="utf-8">
++  <meta name="viewport" content="width=device-width, initial-scale=1">
++  <title>Deterministic proxy scene — demo</title>
++  <style>html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#f1f0eb}canvas{display:block;width:100%;height:100%}</style>
++  <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
++</head>
++<body>
++<canvas id="scene"></canvas>
++<script type="module">
++import * as THREE from 'three';
++import { createHarness } from './runtime.js';
++import { box, sphere, addNeutralStage } from './primitives.js';
++
++// Hand-authored demonstration. No live model generated this scene.
++const scene = new THREE.Scene();
++const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('scene'), antialias: true, preserveDrawingBuffer: true });
++renderer.setSize(window.innerWidth, window.innerHeight, false);
++renderer.shadowMap.enabled = true;
++renderer.shadowMap.type = THREE.PCFSoftShadowMap;
++renderer.outputColorSpace = THREE.SRGBColorSpace;
++const camera = new THREE.PerspectiveCamera(42, window.innerWidth / window.innerHeight, 0.05, 60);
++const ground = addNeutralStage(scene);
++const ball = sphere(0.42);
++const cube = box([0.8, 0.8, 0.8]);
++scene.add(ball, cube);
++
++function update(t) {
++  const u = THREE.MathUtils.clamp(t / 3, 0, 1);
++  ball.position.set(-1.8 + 1.1 * u, 0.42, 0.25);
++  ball.rotation.set(0, 0, -(1.1 * u) / 0.42);
++  cube.position.set(1.25, 0.4, -0.15);
++  cube.rotation.set(0, 0.15, 0);
++  camera.position.set(5, 4, 7);
++  camera.lookAt(0, 0.35, 0);
++}
++createHarness({ scene, camera, renderer, update, seed: 42,
++  subjects: [{ id: 'ball', object: ball, role: 'primary' }, { id: 'cube', object: cube, role: 'primary' }, { id: 'ground', object: ground, role: 'ground' }] });
++window.renderAt(0);
++</script>
++</body>
++</html>

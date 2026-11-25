@@ -1,0 +1,12 @@
+[
+  {
+    "iteration": 0,
+    "hard_pass": false,
+    "score": null,
+    "effective_score": null,
+    "subject_complete": null,
+    "accepted": false,
+    "experiment_accept": false,
+    "eval_status": "error"
+  }
+]

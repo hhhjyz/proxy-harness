@@ -1,0 +1,15 @@
+{
+  "timestamp_utc": "2026-11-25T07:29:53.932579+00:00",
+  "tests_run": 114,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "elapsed_s": 4.272,
+  "successful": true,
+  "python": "3.12.14",
+  "harness_sha256": "bf7cb8b852fe988251a8fe5aa60b774391485026a3752098cfa6fb324c40bf70",
+  "assets_sha256": "e104a11f9cc45e5c6412df4fabe8bc3f675a9f31004fe48b426a770cd3c170bf",
+  "test_suite_sha256": "e506ea47b3a89766d866a1ff46069b7ac989a86a85263a19c0bb024650d66fdb",
+  "devset_manifest_sha256": "2546aa28fbb9296e111bcc4bd8e9058d43b19dbd2ddb4367f7da8acedf78aea9",
+  "log_sha256": "37292529ec37464d9fa3c9d76414b8f97df207bba6ad9a990c0d8f35ac30f5df"
+}

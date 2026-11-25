@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0",
+  "started_utc": "2026-11-25T07:24:55.632157+00:00",
+  "duration_s": 2.53,
+  "status": "passed",
+  "tests_run": 10,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "live_model_used": false,
+  "fixture_origin": "hand_authored_infrastructure_tests",
+  "browser": {
+    "version": "Chromium 158.0.8127.0",
+    "distribution": "@sparticuz/chromium",
+    "distribution_version": "158.0.0",
+    "source": "https://registry.npmjs.org/@sparticuz/chromium/-/chromium-158.0.0.tgz",
+    "archive_integrity_verified": "sha512-Rm/Jg2u7SVYAz/GTqAg4IqGoa1VDZEuqW8OPIe92T/vUa32r+Y5nIM7MnkFIXmjkBBEj/4OezoUnU+rsLxYz/g==",
+    "backend": "ANGLE / Vulkan SwiftShader (software)",
+    "redistributed": false
+  },
+  "three": {
+    "version": "0.180.0",
+    "revision": "180"
+  },
+  "command": "PROXY_BROWSER=/path/to/chromium python -m unittest discover -s tests -p test_browser.py -v",
+  "cases": [
+    {
+      "test": "test_browser.BrowserRuntimeTests.test_01_box_nonuniform_rotated_exact",
+      "status": "passed"
+    },
+    {
+      "test": "test_browser.BrowserRuntimeTests.test_02_sphere_uniform_exact",
+      "status": "passed"
+    },
+    {
+      "test": "test_browser.BrowserRuntimeTests.test_03_sphere_nonuniform_rejected",
+      "status": "passed"
+    },
+    {
+      "test": "test_browser.BrowserRuntimeTests.test_04_sheared_box_rejected",
+      "status": "passed"
+    },
+    {
+      "test": "test_browser.BrowserRuntimeTests.test_05_near_clip_unknown_projection",
+      "status": "passed"
+    },
+    {
+      "test": "test_browser.BrowserRuntimeTests.test_06_behind_unknown_projection",
+      "status": "passed"
+    },
+    {
+      "test": "test_browser.BrowserRuntimeTests.test_07_modified_sphere_no_exact_collider",
+      "status": "passed"
+    },
+    {
+      "test": "test_browser.BrowserRuntimeTests.test_08_audit_unregistered_mesh",
+      "status": "passed"
+    },
+    {
+      "test": "test_browser.BrowserRuntimeTests.test_09_downward_pitch_is_negative",
+      "status": "passed"
+    },
+    {
+      "test": "test_browser.BrowserRuntimeTests.test_10_top_render_restores_scene_and_primary_camera",
+      "status": "passed"
+    }
+  ],
+  "file_sha256": {
+    "assets/runtime.js": "7ac68c78480f74a83772cd9be1144e3610353f77973175ca8ff84d52e14c1780",
+    "assets/primitives.js": "b7b9049a7b89df708f070edba2a909da38d0d13592e603bd27a09b50c1cdee76",
+    "assets/scene.html": "52d8cf3b050267b0285c36bb382e9ca3af8f244d3f1b76b3eede4a9f7e18424b",
+    "assets/vendor/three.module.js": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a",
+    "assets/vendor/three.core.js": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
+    "assets/vendor/dependency.json": "beb985462b336d3033ab246a9a6bc7c4263723f991d30d6b5d6fc3dd82f48cc0",
+    "tests/test_browser.py": "95b1e199d4723ccfbff4b25bc6cc3fde67ec5d887c662440537288de34b18b25"
+  },
+  "demo_render_check": {
+    "hard_pass": true,
+    "failures": 0,
+    "warnings": 0,
+    "sampled_times": 7,
+    "shuffled_repeat_pixels_identical": true,
+    "shuffled_repeat_manifests_identical": true,
+    "contact_sheet_and_top_view_inspected": true
+  },
+  "scope": "Actual browser execution of the listed fixtures on one software backend; not a live-model run or cross-GPU determinism guarantee."
+}
